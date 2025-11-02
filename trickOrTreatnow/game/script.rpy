@@ -398,6 +398,9 @@ label maingame:
         hide megumi_blkwht
 
         scene black
+        show blood with Dissolve(.5):
+            xalign 0.5
+            yalign 0.0
         context_prompter "unfortunately, mahito killed nobara.. aswell as yuji and megumi."
         context_prompter "you all died. mahito is now having a fest eating those treats you catched."
         context_prompter "don't forget to check the github repo and to give good stars!! :)"
