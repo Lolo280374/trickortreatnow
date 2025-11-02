@@ -13,6 +13,110 @@ define mahito = Character("Mahito")
 define megumi = Character("Megumi Fushiguro")
 define context_prompter = Character("")
 
+image ghost = "ghost.png"
+
+transform ghost1:
+    zoom 0.2
+    xalign 0.0 yalign 0.2
+    linear 0.2 xalign 0.8 yalign 0.3
+    linear 0.2 xalign 0.1 yalign 0.7
+    linear 0.2 xalign 0.7 yalign 0.5
+    linear 0.2 xalign 0.2 yalign 0.1
+    linear 0.2 xalign 0.6 yalign 0.4
+    alpha 0.0
+transform ghost2:
+    zoom 0.25
+    xalign 0.2 yalign 0.1
+    linear 0.2 xalign 0.9 yalign 0.2
+    linear 0.2 xalign 0.3 yalign 0.6
+    linear 0.2 xalign 0.8 yalign 0.4
+    linear 0.2 xalign 0.1 yalign 0.3
+    linear 0.2 xalign 0.5 yalign 0.5
+    alpha 0.0
+transform ghost3:
+    zoom 0.3
+    xalign 0.1 yalign 0.8
+    linear 0.2 xalign 0.6 yalign 0.1
+    linear 0.2 xalign 0.2 yalign 0.7
+    linear 0.2 xalign 0.7 yalign 0.2
+    linear 0.2 xalign 0.3 yalign 0.5
+    linear 0.2 xalign 0.8 yalign 0.8
+    alpha 0.0
+transform ghost4:
+    zoom 0.22
+    xalign 0.3 yalign 0.3
+    linear 0.2 xalign 0.7 yalign 0.1
+    linear 0.2 xalign 0.1 yalign 0.5
+    linear 0.2 xalign 0.8 yalign 0.8
+    linear 0.2 xalign 0.2 yalign 0.2
+    linear 0.2 xalign 0.6 yalign 0.6
+    alpha 0.0
+transform ghost5:
+    zoom 0.28
+    xalign 0.4 yalign 0.6
+    linear 0.2 xalign 0.1 yalign 0.1
+    linear 0.2 xalign 0.7 yalign 0.5
+    linear 0.2 xalign 0.3 yalign 0.8
+    linear 0.2 xalign 0.8 yalign 0.2
+    linear 0.2 xalign 0.5 yalign 0.3
+    alpha 0.0
+transform ghost6:
+    zoom 0.2
+    xalign 0.5 yalign 0.2
+    linear 0.2 xalign 0.9 yalign 0.7
+    linear 0.2 xalign 0.2 yalign 0.3
+    linear 0.2 xalign 0.8 yalign 0.5
+    linear 0.2 xalign 0.1 yalign 0.1
+    linear 0.2 xalign 0.6 yalign 0.4
+    alpha 0.0
+transform ghost7:
+    zoom 0.3
+    xalign 0.6 yalign 0.1
+    linear 0.2 xalign 0.2 yalign 0.6
+    linear 0.2 xalign 0.7 yalign 0.2
+    linear 0.2 xalign 0.1 yalign 0.8
+    linear 0.2 xalign 0.8 yalign 0.3
+    linear 0.2 xalign 0.3 yalign 0.5
+    alpha 0.0
+transform ghost8:
+    zoom 0.25
+    xalign 0.7 yalign 0.5
+    linear 0.2 xalign 0.1 yalign 0.2
+    linear 0.2 xalign 0.8 yalign 0.6
+    linear 0.2 xalign 0.3 yalign 0.1
+    linear 0.2 xalign 0.9 yalign 0.7
+    linear 0.2 xalign 0.5 yalign 0.4
+    alpha 0.0
+transform ghost9:
+    zoom 0.2
+    xalign 0.8 yalign 0.3
+    linear 0.2 xalign 0.3 yalign 0.7
+    linear 0.2 xalign 0.6 yalign 0.1
+    linear 0.2 xalign 0.2 yalign 0.5
+    linear 0.2 xalign 0.7 yalign 0.2
+    linear 0.2 xalign 0.4 yalign 0.6
+    alpha 0.0
+transform ghost10:
+    zoom 0.3
+    xalign 0.9 yalign 0.6
+    linear 0.2 xalign 0.2 yalign 0.1
+    linear 0.2 xalign 0.8 yalign 0.5
+    linear 0.2 xalign 0.1 yalign 0.8
+    linear 0.2 xalign 0.7 yalign 0.3
+    linear 0.2 xalign 0.5 yalign 0.2
+    alpha 0.0
+
+screen ghost_attack:
+    add "ghost" at ghost1
+    add "ghost" at ghost2
+    add "ghost" at ghost3
+    add "ghost" at ghost4
+    add "ghost" at ghost5
+    add "ghost" at ghost6
+    add "ghost" at ghost7
+    add "ghost" at ghost8
+    add "ghost" at ghost9
+    add "ghost" at ghost10
 
 # The game starts here.
 
@@ -251,8 +355,25 @@ label maingame:
                             "no, that shit isn't funny man":
                                 mahito "how do you dare say that? all right then."
                                 label badjoke:
-                                    mahito "wrong awnser."
-                                    
+                                    play sound "killsfx.mp3"
+
+                                    show screen ghost_attack
+                                    play sound "hahahahah.mp3"
+                                    $ renpy.pause(1, hard=True)
+                                    hide screen ghost_attack
+
+                                    show screen ghost_attack
+                                    $ renpy.pause(1, hard=True)
+                                    hide screen ghost_attack
+
+                                    show screen ghost_attack
+                                    play sound "hahahahah.mp3"
+                                    $ renpy.pause(1, hard=True)
+                                    hide screen ghost_attack
+
+                                    mahito "these ghosts r going crazy but heh u lost nobara now"
+                                    mahito "don't worry tho. you're next, megumi and yuji!"
+                                    jump death
 
                             "yeah that's funny":
                                 mahito "stop lying. i know you're so mad, yuji."
@@ -267,3 +388,17 @@ label maingame:
                 context_prompter "Mahito heard you arrive..."
                 mahito "Hey hey hey. Where are you all going. Come back here. Go ahead."
                 jump h3knock
+
+    label death:
+        play sound "killsfx.mp3"
+        hide nobara_dead
+        hide yuji_blkwht
+        hide mahito
+        play sound "killsfx.mp3"
+        hide megumi_blkwht
+
+        scene black
+        context_prompter "unfortunately, mahito killed nobara.. aswell as yuji and megumi."
+        context_prompter "you all died. mahito is now having a fest eating those treats you catched."
+        context_prompter "don't forget to check the github repo and to give good stars!! :)"
+        return
