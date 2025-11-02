@@ -141,9 +141,7 @@ label start:
 
     gojo "HEY MY LITTLE YOUNG ADVENTURER."
     gojo "Look. I'm not going to sentence you to prison or anything. This isn't lore accurate."
-    gojo "However, this game is kind-of a (potentially unwanted software) in a way you could say."
-    gojo "The part of the gameplay will be to log you off, spam you of jumpscares, and of windows (which may cause your system to a halt.)"
-    gojo "I'M NOT RESPONSIBLE!!! watch the demo if you're scared or something."
+    gojo "the gameplay will have a bit of jumpscares, but nothing too crazy."
     gojo "and this game contains spoiler for Jujutsu Kaisen season 2 (Shibuya Incident arc)"
     gojo "the story goes as follows..."
 
