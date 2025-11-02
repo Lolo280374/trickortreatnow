@@ -229,7 +229,7 @@ label maingame:
                 mahito "Let me guess."
                 all3 "TRICK OR TREAT!!!!!!!!!!"
                 mahito "C'mon guys. You've passed age for this. Whataver."
-                context_prompter "Mahito gives all 3 treats, hardly smiling..."
+                context_prompter "Mahito gives all 3 of you treats, hardly smiling..."
 
                 mahito "By the way, wanna hear a joke?"
                 menu:
@@ -240,6 +240,23 @@ label maingame:
                         mahito "Are you sure?"
                         yuji "I mean yeah. She's in front of us."
                         mahito "look again!"
+                        hide nobara_blkwht
+                        play sound "killsfx.mp3"
+                        show nobara_dead with Dissolve(.5)
+                        mahito "hahaha."
+                        megumi "yo what the fuck"
+                        yuji "what the fuck did you do???"
+                        mahito "wasn't my joke funny?"
+                        menu:
+                            "no, that shit isn't funny man":
+                                mahito "how do you dare say that? all right then."
+                                label badjoke:
+                                    mahito "wrong awnser."
+                                    
+
+                            "yeah that's funny":
+                                mahito "stop lying. i know you're so mad, yuji."
+                                jump badjoke
                     
                     "No thanks.":
                         mahito "I don't care. you'll hear it anyway."

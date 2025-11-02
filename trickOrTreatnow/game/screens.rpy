@@ -373,7 +373,7 @@ screen main_menu():
             text "[config.name!t]":
                 style "main_menu_title"
 
-            text "[config.version]":
+            text _("lolodotzip - check the github!!"):
                 style "main_menu_version"
 
 
@@ -565,7 +565,7 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("built by lolodotzip for a halloween styled project! check the {a=https://github.com/Lolo280374/trickortreatnow/}github{/a} for more information!\npls upvote my project hackclub people i rly want stuff pls hackclubbers siege good")
 
 
 style about_label is gui_label
