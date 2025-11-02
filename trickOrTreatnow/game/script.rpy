@@ -10,6 +10,7 @@ define all3 = Character("(everyone in the group)")
 define todo = Character("Aoi Todo")
 define yuji = Character("Itadori Yuji")
 define mahito = Character("Mahito")
+define megumi = Character("Megumi Fushiguro")
 define context_prompter = Character("")
 
 
@@ -220,7 +221,32 @@ label maingame:
 
         menu:
             "Knock on the door":
-                context_prompter "hi"
+                label h3knock:
+                context_prompter "You knock on the door..."
+                show mahito at half_size with Dissolve(.5):
+                    xalign 0.75
+                    yalign 0.78
+                mahito "Let me guess."
+                all3 "TRICK OR TREAT!!!!!!!!!!"
+                mahito "C'mon guys. You've passed age for this. Whataver."
+                context_prompter "Mahito gives all 3 treats, hardly smiling..."
+
+                mahito "By the way, wanna hear a joke?"
+                menu:
+                    "Hear the joke":
+                        mahito "Great! Why does Nobara look like a skull?"
+                        label h3joke:
+                        megumi "she dosen't you dumb fat pig."
+                        mahito "Are you sure?"
+                        yuji "I mean yeah. She's in front of us."
+                        mahito "look again!"
+                    
+                    "No thanks.":
+                        mahito "I don't care. you'll hear it anyway."
+                        mahito "Why does Nobara look like a skull?"
+                        jump h3joke
             
             "Run away (you really shouldn't)":
-                context_prompter "hi"
+                context_prompter "Mahito heard you arrive..."
+                mahito "Hey hey hey. Where are you all going. Come back here. Go ahead."
+                jump h3knock
