@@ -16,8 +16,6 @@ you decide to go trick or treating on a friday night... what happens that night 
 showcase (video/screenshots)
 </h1>
 
-[![pythonw_Dg58LI5Fkp](https://github.com/user-attachments/assets/a578fe90-6975-4891-8f23-c7cde3a32f57)](https://github.com/user-attachments/assets/00f835d5-7104-4fd9-b516-12900e0cbe38)
-
 [![FER95oPXvq](https://github.com/user-attachments/assets/df9e3b5f-5fa8-411c-b1de-1829e95f9853)](https://github.com/user-attachments/assets/00f835d5-7104-4fd9-b516-12900e0cbe38)
 
 > [!WARNING]  
